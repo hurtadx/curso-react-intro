@@ -22,28 +22,7 @@
     z-index: 1001;
     min-width: 300px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
 }
 
-.Modal-buttonContainer {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.Modal-button {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-.Modal-button--cancel {
-    background-color: #e63946;
-    color: white;
-}
-
-.Modal-button--add {
-    background-color: #2a9d8f;
-    color: white;
-}
 
