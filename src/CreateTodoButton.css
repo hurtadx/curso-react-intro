@@ -1,0 +1,24 @@
+button{
+    height: 2.5rem;
+    width: 10%;
+    border-radius: 50%;
+    background-color: #669bbc;
+    border: 1px solid #003049;
+        cursor: pointer;
+    font-size: 24px;
+
+    right: 24px;
+    font-weight: bold;
+    color: #FDF0D5;
+    height: 47px;
+    width: 47px;
+    transform: rotate(0);
+    transition: .3s ease;
+}
+
+
+button:hover{
+   transform: translateY(-2px);
+   box-shadow: #003049 0 2px 4px -1px;
+    cursor: pointer;
+}
