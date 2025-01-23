@@ -48,3 +48,17 @@ p {
     color: #5465FF;
     cursor: pointer;
 }
+
+
+.TodoItem-p--complete{
+    text-decoration: line-through;
+}
+
+.icon-check--active{
+    color: #3f4cbe; 
+    font-size: 20px;
+}
+
+.TodoItem--complete{
+    
+}
