@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import './TodoSearch.css';
+import './CSS/TodoSearch.css';
 
 function TodoSearch() {
     return (

@@ -4,7 +4,7 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
-import './App.css';
+import './CSS/App.css';
 
 
 const defaultTodos = [

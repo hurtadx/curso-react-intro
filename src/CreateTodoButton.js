@@ -2,7 +2,7 @@ import React from 'react';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import './CreateTodoButton.css';
+import './CSS/CreateTodoButton.css';
 import { Modal } from './Modal/Modal';
 
 function CreateTodoButton() {
