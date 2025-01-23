@@ -6,7 +6,7 @@ import './TodoItem.css';
 function TodoItem(props) {
     return (
         <li>
-            <span className="icon icon-check">
+            <span className={'icon icon-check icon-check--active'}>
                 <FontAwesomeIcon icon={faCheck} />
             </span>
             <p>{props.text}</p>
