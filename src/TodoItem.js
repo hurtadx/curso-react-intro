@@ -6,7 +6,10 @@ import './CSS/TodoItem.css';
 function TodoItem(props) {
     return (
         <li className={`li todoitem ${props.completed && "TodoItem--complete"}`}>
-            <span className={`icon icon-check ${props.completed && "icon-check--active"}`}>
+            <span 
+            className={`icon icon-check ${props.
+            completed && "icon-check--active"}`}
+            onClick={aq}>
                 <FontAwesomeIcon icon={faCheck} />
             </span>
             <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>{props.text}</p>

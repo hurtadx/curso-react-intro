@@ -33,6 +33,7 @@ function App() {
   ); 
 
 
+
   return (
     <>
       
@@ -51,10 +52,11 @@ function App() {
             key={todo.text} 
             text= {todo.text} 
             completed= {todo.completed}
+            onComplete={completeTodo}
           /> 
         ))}
       </TodoList>
-      
+    
       
     <CreateTodoButton/>
       
