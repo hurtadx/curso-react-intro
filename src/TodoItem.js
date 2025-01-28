@@ -9,11 +9,12 @@ function TodoItem(props) {
             <span 
             className={`icon icon-check ${props.
             completed && "icon-check--active"}`}
-            onClick={aq}>
+            onClick={props.onComplete}>
                 <FontAwesomeIcon icon={faCheck} />
             </span>
             <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>{props.text}</p>
-            <span className="icon icon-delete">
+            <span className="icon icon-delete"
+            onClick={props.onDelete}>
                 <FontAwesomeIcon icon={faXmark} />
             </span>
         </li>

@@ -13,7 +13,7 @@ const defaultTodos = [
   {text: 'Tomar el curso de intro a React', completed: false},
   {text: 'Llorar con la llorona', completed: false},
   {text: 'Llorar a la lloraria', completed: false},
-  {text:'usar estados derivados', completed: true}
+  {text:'usar estados derivados', completed: false}
 ]
 
 function App() {
@@ -32,6 +32,26 @@ function App() {
     }
   ); 
 
+
+  const deleteTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex((todo) => todo.text == text);
+    newTodos.splice(todoIndex, 1
+    );
+     setTodos(newTodos);
+  };
+
+  const completeTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text
+    );
+
+    newTodos[todoIndex].completed = true;
+    setTodos (newTodos);
+  }
+
+  
 
 
   return (
@@ -52,7 +72,8 @@ function App() {
             key={todo.text} 
             text= {todo.text} 
             completed= {todo.completed}
-            onComplete={completeTodo}
+            onComplete={() => completeTodo(todo.text)} 
+            onDelete={() => deleteTodo(todo.text)}
           /> 
         ))}
       </TodoList>
