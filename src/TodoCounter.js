@@ -1,9 +1,11 @@
+import { counter } from '@fortawesome/fontawesome-svg-core';
 import './CSS/TodoCounter.css';
 
-function TodoCounter ({total, completed}) {
+
+function TodoCounter ({counter,total, completed}) {
     return (
      <h1>
-      Has completado <span>{completed}</span> de <span>{total}</span>  TODOs
+      {counter}
      </h1>
     );
   }

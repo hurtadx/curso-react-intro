@@ -13,7 +13,8 @@ const defaultTodos = [
   {text: 'Tomar el curso de intro a React', completed: false},
   {text: 'Llorar con la llorona', completed: false},
   {text: 'Llorar a la lloraria', completed: false},
-  {text:'usar estados derivados', completed: false}
+  {text:'usar estados derivados', completed: false},
+  {text:'archivar', completed:false}
 ]
 
 function App() {
@@ -51,13 +52,20 @@ function App() {
     setTodos (newTodos);
   }
 
-  
+  //estas trabajando aca tontolon
 
+  const [Counter, setCounter] = React.useState
+  ('Has completado <span>{completed}</span> de <span>{total}</span>  TODOs')
+
+   
+
+    
 
   return (
     <>
       
       <TodoCounter 
+      counter={Counter}
       completed={completedTodos} 
       total={totalTodos}/>
 
