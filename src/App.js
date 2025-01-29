@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
@@ -43,29 +43,42 @@ function App() {
   };
 
   const completeTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
     const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex(
-      (todo) => todo.text == text
-    );
-
-    newTodos[todoIndex].completed = true;
-    setTodos (newTodos);
-  }
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setTodos(newTodos);
+  };
 
   //estas trabajando aca tontolon
 
-  const [Counter, setCounter] = React.useState
-  ('Has completado <span>{completed}</span> de <span>{total}</span>  TODOs')
+  const [Counter, setCounter] = React.useState('')
 
-   
+   const updateCounter = (newTitle) => {
+    setCounter(newTitle)
+   };
 
+   useEffect(() => {
+    if (completedTodos === totalTodos && totalTodos > 0) {
+      updateCounter(`¡Has Hecho <span>ToDos</span>!`);
     
+    }else if(completedTodos === 0 && totalTodos === 0){
+      updateCounter('¡Crea Nuevos <span>Todo´s<span>!')
+    }else {
+      updateCounter(`Has Completado <span>${completedTodos}</span> De <span>${totalTodos}</span> TODOs`);
+    }
+    }, [completedTodos, totalTodos]);
+    
+  
+      
+   
 
   return (
     <>
       
+      <h1 dangerouslySetInnerHTML={{ __html: Counter }} />
+
       <TodoCounter 
-      counter={Counter}
+       
       completed={completedTodos} 
       total={totalTodos}/>
 
