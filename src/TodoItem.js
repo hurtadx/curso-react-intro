@@ -7,8 +7,8 @@ function TodoItem(props) {
     return (
         <li className={`li todoitem ${props.completed && "TodoItem--complete"}`}>
             <span 
-            className={`icon icon-check ${props.
-            completed && "icon-check--active"}`}
+            className={`icon icon-check ${
+            props.completed && "icon-check--active"}`}
             onClick={props.onComplete}>
                 <FontAwesomeIcon icon={faCheck} />
             </span>

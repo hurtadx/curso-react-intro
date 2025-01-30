@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
 import './CSS/App.css';
-import { text } from '@fortawesome/fontawesome-svg-core';
+
 
 
 const defaultTodos = [
@@ -18,7 +18,7 @@ const defaultTodos = [
 ]
 
 function App() {
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, setTodos] = useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState(''); 
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
@@ -36,7 +36,7 @@ function App() {
 
   const deleteTodo = (text) => {
     const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex((todo) => todo.text == text);
+    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
     newTodos.splice(todoIndex, 1
     );
      setTodos(newTodos);

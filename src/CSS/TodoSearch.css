@@ -6,6 +6,9 @@
     position: relative;
     width: 80%;
     margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 20px auto;
+    justify-self: start;
 }
 
 
@@ -21,6 +24,7 @@ input {
     color: #003049;
     font-size: 20px;
     font-style: bold;
+    grid-column: 2/3;
 }
 
 input::placeholder {
@@ -35,9 +39,10 @@ input:focus {
 
 .search-icon {
     position: absolute;
-    left: 1rem;
-    top: 50%;
+    left: 8%;
+    top: 46%;
     transform: translateY(-50%);
     color: #003049;
     pointer-events: none; 
+    grid-row: 1 / 2;
 }
